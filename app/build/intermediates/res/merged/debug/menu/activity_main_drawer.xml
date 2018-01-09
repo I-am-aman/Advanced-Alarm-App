@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/chronometer"
+            android:title="Chronometer"
+            android:icon="@drawable/chronometer"/>
+
+        <item
+            android:id="@+id/timer"
+            android:icon="@drawable/ic_timer"
+            android:title="Timer" />
+        <item
+            android:id="@+id/notes"
+            android:icon="@drawable/ic_notes"
+            android:title="Notes" />
+        <item
+            android:id="@+id/about_developer"
+            android:icon="@drawable/ic_about_developers"
+            android:title="About Developer" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>

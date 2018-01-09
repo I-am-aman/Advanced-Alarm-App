@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\build\\intermediates\\res\\merged\\debug\\xml\\settings_activity.xml",
+        "source": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\src\\main\\res\\xml\\settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\build\\intermediates\\res\\merged\\debug\\xml\\activity_alarm.xml",
+        "source": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\src\\main\\res\\xml\\activity_alarm.xml"
+    }
+]

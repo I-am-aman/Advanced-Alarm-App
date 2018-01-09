@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="techknights.droidrush.getalarmed">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/alarm1"
+        android:label="24x7 Alert"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:label="24x7 Alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotesActivity"
+            android:configChanges="orientation"
+            android:label="Notes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutDeveloperActivity"
+            android:configChanges="orientation"
+            android:label="About Developer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="orientation"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlarmActivity"
+            android:configChanges="orientation"
+            android:label="New Alarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TimerActivity"
+            android:configChanges="orientation"
+            android:label="Timer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AlarmAlertActivity"
+            android:excludeFromRecents="true"
+            android:label="You are missing something Important!!"
+            android:screenOrientation="sensorPortrait"
+            android:showOnLockScreen="true"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="com.blah.something.ALARM_RECIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChronometerActivity"
+            android:configChanges="orientation"
+            android:label="Chronometer"
+            android:screenOrientation="portrait"/>
+
+    </application>
+
+</manifest>

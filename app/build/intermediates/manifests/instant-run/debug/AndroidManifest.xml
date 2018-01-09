@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="techknights.droidrush.getalarmed"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="26" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/alarm1"
+        android:label="24x7 Alert"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="techknights.droidrush.getalarmed.MainActivity"
+            android:configChanges="orientation"
+            android:label="24x7 Alert"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.NotesActivity"
+            android:configChanges="orientation"
+            android:label="Notes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.AboutDeveloperActivity"
+            android:configChanges="orientation"
+            android:label="About Developer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.SettingsActivity"
+            android:configChanges="orientation"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.AlarmActivity"
+            android:configChanges="orientation"
+            android:label="New Alarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.TimerActivity"
+            android:configChanges="orientation"
+            android:label="Timer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="techknights.droidrush.getalarmed.AlarmAlertActivity"
+            android:excludeFromRecents="true"
+            android:label="You are missing something Important!!"
+            android:screenOrientation="sensorPortrait"
+            android:showOnLockScreen="true"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <receiver android:name="techknights.droidrush.getalarmed.AlarmReceiver" >
+            <intent-filter android:priority="1" >
+                <action android:name="com.blah.something.ALARM_RECIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="techknights.droidrush.getalarmed.IntroActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="techknights.droidrush.getalarmed.ChronometerActivity"
+            android:configChanges="orientation"
+            android:label="Chronometer"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:authorities="techknights.droidrush.getalarmed.com.android.tools.fd.runtime.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:example="http://schemas.android.com/apk/res/com.mnm.seekbarpreference">
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+    <PreferenceCategory
+        android:title="Sounds"
+        >
+
+        <SwitchPreference
+            android:key="silent_mode_preference"
+            android:title="Alarm in Silent mode"
+            android:defaultValue="false"
+            android:summaryOn="On"
+            android:summaryOff="Off"
+            />
+
+
+       <techknights.droidrush.getalarmed.SeekBarPreference
+           android:key="volume_preference"
+           android:title="Volume"
+           android:defaultValue="50"
+           android:min="0"
+           android:max="100"
+           />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Snooze"
+        >
+
+        <CheckBoxPreference
+            android:enabled="true"
+            android:defaultValue="true"
+            android:key="snooze_preference"
+            android:title="Snooze"
+            />
+
+        <ListPreference
+            android:key="snooze_duration_preference"
+            android:title="Snooze Duration"
+            android:dependency="snooze_preference"
+            android:defaultValue="1"
+            android:summary="%s"
+            android:entries="@array/snooze_duration_titles"
+            android:entryValues="@array/snooze_duration_values"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+             />
+
+        <ListPreference
+            android:key="snooze_times_preference"
+            android:dependency="snooze_preference"
+            android:title="Max Snooze time"
+            android:summary="%s"
+            android:entries="@array/snooze_times_titles"
+            android:entryValues="@array/snooze_times_values"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:defaultValue="3" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Other Settings">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="vibrate_preference"
+            android:summaryOff=" Off"
+            android:summaryOn="On"
+            android:title="Vibrate" />
+
+        <SwitchPreference
+            android:key="shake_preference"
+            android:title="Shake"
+            android:summaryOn="Alarm by Shaking On"
+            android:summaryOff="Alarm by Shaking Off"
+            android:defaultValue="false"/>
+
+        <CheckBoxPreference
+            android:key="exit_preference"
+            android:title="Exit Confirmation"
+            android:defaultValue="true"
+
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

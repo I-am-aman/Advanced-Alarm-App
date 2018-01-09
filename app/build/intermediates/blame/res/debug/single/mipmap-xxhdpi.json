@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\alarm.png",
+        "source": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\src\\main\\res\\mipmap-xxhdpi\\alarm.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\Dell\\AndroidStudioProjects\\GetAlarmed\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    }
+]
